@@ -179,7 +179,7 @@ type DDPController struct {
 }
 
 func (c *DDPController) WriteOffset(data []byte, offset uint32) (int, error) {
-	c.header.Offset = offset
+	c.SetOffset(offset)
 	return c.Write(append(c.header.Bytes(), data...))
 }
 
