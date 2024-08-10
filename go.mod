@@ -1,3 +1,3 @@
-module github.com/coral/ddp
+module github.com/nocko/ddp
 
 go 1.19
