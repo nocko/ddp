@@ -255,7 +255,7 @@ func (d *DDPController) ConnectUDP(addrString string) error {
 	d.output = conn
 
 	// Listen for UDP packets
-	udpServer, err := net.ListenPacket("udp", fmt.Sprintf(":%d", addr.Port))
+	udpServer, err := net.ListenPacket("udp", fmt.Sprintf(":%d", addr.Port+1))
 	if err != nil {
 		log.Fatal(err)
 	}
